@@ -4,4 +4,4 @@ def area(a, b):
 
 def perimeter(a, b): 
     '''Принимает числа a и b, возвращает удвоенную сумму чисел a и b'''
-    return 2 * (a + b) 
+    return a + b 
