@@ -13,6 +13,6 @@ def perimeter(r):
     '''Принимает число r, возвращает удвоенное 
     произведение чила r на Пи из библиотеки math: периметр круга'''
     if r > 0:
-        return math.pi * r
+        return 2 * math.pi * r
     return 0
 
