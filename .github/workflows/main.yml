@@ -1,0 +1,26 @@
+name: Run Unit Tests
+
+on:
+  push:
+    branches:
+      - new_features_466415
+
+jobs:
+  unit_test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Run tests
+        run: |
+          py -m unittest functionality_test.py
